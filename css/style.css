@@ -1,0 +1,260 @@
+
+/* 1. Basic page settings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #E8DFF0;
+    line-height: 1.7;
+}
+
+/* 2. Navigation bar */
+header {
+    background-color: #000000;
+    border-bottom: 1px solid #301040;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #D8C5E8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #C77DFF;
+}
+
+/* 3. Main profile section */
+.hero {
+    max-width: 1100px;
+    min-height: 520px;
+    margin: auto;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.welcome {
+    color: #C77DFF;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #C77DFF;
+}
+
+.hero h2 {
+    color: #D8C5E8;
+    font-size: 22px;
+}
+
+.description {
+    color: #BDA8CC;
+    margin: 20px 0 30px;
+    max-width: 520px;
+}
+
+/* 4. Profile photo */
+.profile-image {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border: 3px solid #7B2CBF;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #301040;
+    box-shadow: 0 0 30px rgba(157, 78, 221, 0.15);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 5. Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #7B2CBF;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 1px solid #9D4EDD;
+    border-radius: 8px;
+    transition: background-color 0.3s,
+                transform 0.3s;
+}
+
+.button:hover {
+    background-color: #5A189A;
+    transform: translateY(-2px);
+}
+
+/* 6. Content sections */
+.content-section {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 45px 25px;
+    background-color: #0A0A0A;
+    border: 1px solid #301040;
+    border-radius: 14px;
+}
+
+.content-section h2 {
+    color: #C77DFF;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    color: #D8C5E8;
+}
+
+/* 7. Skill badges */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-list span {
+    background-color: #301040;
+    color: #F0D9FF;
+    padding: 8px 16px;
+    border: 1px solid #45205C;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.skills-list span:hover {
+    background-color: #45205C;
+}
+
+/* 8. Project cards */
+.project-card {
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #08050A;
+    border: 1px solid #45205C;
+    border-radius: 10px;
+    transition: border-color 0.3s,
+                transform 0.3s;
+}
+
+.project-card:hover {
+    border-color: #9D4EDD;
+    transform: translateY(-3px);
+}
+
+.project-card h3 {
+    color: #E0AAFF;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    color: #BDA8CC;
+}
+
+/* 9. Contact section */
+#contact {
+    text-align: center;
+}
+
+#contact .button {
+    margin-top: 20px;
+}
+
+/* 10. Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #BDA8CC;
+    border-top: 1px solid #301040;
+}
+
+/* 11. Mobile screen adjustments */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 45px;
+        gap: 30px;
+    }
+
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content-section {
+        margin: 15px;
+        padding: 25px 20px;
+    }
+}
